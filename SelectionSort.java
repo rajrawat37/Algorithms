@@ -18,7 +18,6 @@ public class SelectionSort {
             arr[i] = tmp;
         }
             for(i=0;i<n;i++) System.out.print(arr[i]+ " ");       //printing sorted array
-                                                                  //decreasing order
-                                                                                                   //good boi
+                                                                  //decreasing ord
     }
 }
