@@ -11,12 +11,14 @@ public class SelectionSort {
         for (i = 0; i < n - 1; i++) {
             min_index = i;
             for (int j = i + 1; j < n; j++)
-                if (arr[j] < arr[min_index])     //finding minimum element in the unsorted subarray
+                if (arr[j] > arr[min_index])     //finding minimum element in the unsorted subarray
                     min_index = j;
             tmp = arr[min_index];                //swapping minimum element with the assumed sorted subarray
             arr[min_index] = arr[i];
             arr[i] = tmp;
         }
             for(i=0;i<n;i++) System.out.print(arr[i]+ " ");       //printing sorted array
+                                                                  //decreasing order
+                                                                                                   //good boi
     }
 }
