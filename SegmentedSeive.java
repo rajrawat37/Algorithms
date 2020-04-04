@@ -4,7 +4,7 @@
         array = new int[sqt + 1];
         primes = new int[sqt + 1];
 
-        for (int i = 0; i < sqt; i++)
+        for (int i = 0; i < sqt+1; i++)
             array[i] = 1;
 
         for (int i = 2; i <= sqt; i++) {
