@@ -1,15 +1,11 @@
-  static void seive(int n){
-       int n=sc.nextInt();
-	     boolean[] prime = new boolean[n+1];
-	     Arrays.fill(prime,true);
-	     for(int i=2;i<=(int)Math.sqrt(n);i++){
-	          if(prime[i]){
-	               for(int k=i*i;k<=n;k+=i) 
-	                prime[k]=false;
-	          }
-	     }
-	     for(int j=2;j<prime.length;j++)
-	      if(prime[j])
+ static int seive(int n){
+       boolean [] compste= new boolean[n+1];
+       for(int i=2;i*i<=n;i++){
+            for(int j=i*i;j<=n && !compste[i];j+=i)
+                 compste[j]=true;
+       }
+	     for(int j=2;j<cmpste.length;j++)
+	      if(!compste[j])
 	       System.out.print(j+ " ");
 	       System.out.println();
   }
