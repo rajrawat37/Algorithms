@@ -4,7 +4,7 @@
             for(int j=i*i;j<=n && !compste[i];j+=i)
                  compste[j]=true;
        }
-	     for(int j=2;j<cmpste.length;j++)
+	     for(int j=2;j<compste.length;j++)
 	      if(!compste[j])
 	       System.out.print(j+ " ");
 	       System.out.println();
