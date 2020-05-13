@@ -32,4 +32,4 @@ static void primefactors(int n)
     
  //Approach 3
  
- static void primeFactors(int k)
+ static void primeFactors(int k) //using seive ; to be added shortly 
