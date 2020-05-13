@@ -1,10 +1,10 @@
 //Approach 1
 
-static void primefactors(int k)
+static void primefactors(int n)
    {
-        for (int i = 2; k != 1; i++) {
-            while (k % i == 0) {
-                k = k / i;
+        for (int i = 2; n != 1; i++) {
+            while (n % i == 0) {
+                n = n / i;
                 System.out.print(i + " ");
             }
         }
