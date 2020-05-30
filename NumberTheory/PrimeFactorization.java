@@ -32,4 +32,31 @@ static void primefactors(int n)
     
  //Approach 3
  
- static void primeFactors(int k) //using seive ; to be added shortly 
+   // first find the least prime factor of that number and then divide it revursivly with that number
+   //using seive ; useful for multiple queries
+    static void seive(){
+         int []least = new int[n+1];
+         least[1]=1;
+       
+        for(int i=2;i*i<=n;i++){
+             if(least[i]==0){
+                 least[i]=i;
+                 for(int j=i*i;j<=n;j+=i){
+                     if(least[i]==0)
+                         least[j]=i;
+                 }
+             }
+        }
+    }
+    
+      // by dividing by smallest prime factor recursively
+    static Vector<Integer> getFactorization(int x) 
+    { 
+        Vector<Integer> ret = new Vector<>(); 
+        while (x != 1) 
+        { 
+            ret.add(least[x]); 
+            x = x / least[x]; 
+        } 
+        return ret; 
+    } 
