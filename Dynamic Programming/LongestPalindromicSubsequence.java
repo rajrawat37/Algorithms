@@ -1,13 +1,13 @@
-    static int lps(char seq[], int i, int j) {  
+    static int lps(char ch[], int i, int j) {  
         if (i == j) { 
             return 1; 
         } 
-        if (seq[i] == seq[j] && i + 1 == j) { 
+        if (ch[i] == ch[j] && ch.length==2) { 
             return 2; 
         } 
-        if (seq[i] == seq[j]) { 
-            return lps(seq, i + 1, j - 1) + 2; 
+        if (ch[i] == ch[j]) { 
+            return lps(ch, i + 1, j - 1) + 2; 
         } 
-        return Math.max(lps(seq, i, j - 1), lps(seq, i + 1, j)); 
+        return Math.max(lps(ch, i, j - 1), lps(ch, i + 1, j)); 
     } 
   
