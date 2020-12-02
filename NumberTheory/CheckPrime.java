@@ -1,4 +1,6 @@
- static boolean prime(int n) {
+//Approach 1
+
+static boolean prime(int n) {
         if (n <= 1) return false;
         if (n <= 3) return true;
         if (n % 2 == 0 || n % 3 == 0) return false;
@@ -7,3 +9,12 @@
                 return false;
         return true;
     }
+
+//Approach 2
+
+  static boolean isPrime(int x) {
+    for (int i = 2; i * i <= x; i++)
+      if (x % i == 0)
+        return false;
+    return true;
+  }
