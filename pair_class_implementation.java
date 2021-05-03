@@ -31,9 +31,19 @@ public class _pair {
         public int getX() {
             return x;
         }
+        
+        //First Column -:
+        
+            // Ascending order : this.x-p.x
+            //Descending order : p.x-this.x
+        
+        //Second column -:
+          
+            //Ascending order : this.y-p.y
+            //Descending order : p.y-this.y;
 
         public int compareTo(Pair p){
-            return this.x-p.x;   //to sort according to first column use x else to sort according to second column replace this line with return this.y-p.y;
+            return this.x-p.x;  
         }
     }
 }
