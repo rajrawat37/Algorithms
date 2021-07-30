@@ -1,25 +1,25 @@
-import java.util.*;
+//Genric type
 
-public class _pair {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+class Pair<T,U> {
+    T key;
+    U value;
 
-        Pair[] point = new Pair[3];  //A point array of type pair
-        point[0] = new Pair(3, 7);
-        point[1] = new Pair(2, 9);
-        point[2] = new Pair(4, 8);
-
-        Arrays.sort(point);
-
-        for(int i=0;i<3;i++) {
-            System.out.print(point[i].x + " " + point[i].y);
-            System.out.println();
-        }
-
-        System.out.println();
+    Pair(T a, U b) {
+        this.key = a;
+        this.value = b;
     }
-  
- 
+
+    void set(T a, U b) {
+        this.key = a;
+        this.value = b;
+    }
+
+    Pair get() {
+        return this;
+    }
+}
+
+//non-genric type
     static class Pair implements Comparable<Pair> {
         int x;
         int y;
